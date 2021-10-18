@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "img": "https://www.ibnsinatrust.com/image/Find-a-Doctor.png",
+        "title": "FIND YOUR DOCTOR"
+    },
+    {
+        "id": "2",
+        "img": "https://www.ibnsinatrust.com/image/Hospital-Beds-&-Cabins.png",
+        "title": "HOSPITAL SERVICES"
+    },
+    {
+        "id": "3",
+        "img": "https://www.ibnsinatrust.com/image/Surgery-Packages.png",
+        "title": "SURGERY PACKAGES"
+    },
+    {
+        "id": "4",
+        "img": "https://www.ibnsinatrust.com/image/Test%20Report.png",
+        "title": "DIAGNOSTIC SERVICES"
+    },
+    {
+        "id": "5",
+        "img": "https://www.ibnsinatrust.com/image/Online-Appointment.png",
+        "title": "CARDIAC SERVICES"
+    },
+    {
+        "id": "6",
+        "img": "https://www.ibnsinatrust.com/image/Health-Checkup-Packages.png",
+        "title": "HEALTH CHECK UP PACKAGES"
+    }
+]
