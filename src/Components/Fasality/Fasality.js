@@ -23,7 +23,12 @@ const Fasality = () => {
             </div>
 
             <div>
-                <Row xs={1} md={2} className="g-3  m-4 " >
+                <Row xs={1} md={2} className="g-3  m-4 " style={{
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundImage: `url("https://www.ibnsinatrust.com/image/Best_laboratory_test.jpg")`
+
+                }} >
                     {
                         fasality.map(fasality => <FasalityCard
                             key={fasality.id}

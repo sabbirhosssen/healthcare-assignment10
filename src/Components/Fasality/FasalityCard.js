@@ -16,7 +16,7 @@ const ServiceCard = (props) => {
                     <Col sm={8}>
                         <Card.Body>
                             <Card.Title variant="text-center text-durk" >{title}</Card.Title>
-                            <Card.Title variant="text-center bg-info" ><Button> Ditals</Button></Card.Title>
+
 
                         </Card.Body>
                     </Col>

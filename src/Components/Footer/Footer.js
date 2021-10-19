@@ -37,7 +37,7 @@ const Footer = () => {
                             <h3> Contact Us</h3>
                             <ul className="list-unstyled py-4">
                                 <li className="py-3">
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" />
+                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Email" />
 
                                 </li>
 

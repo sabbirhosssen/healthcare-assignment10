@@ -6,8 +6,13 @@ import Home from './Components/Home/Home';
 import NotFound from './Components/NotFound/NotFound';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+
+import Services from './Components/Service/Services';
+import Login from './Components/From/Login/Login';
+import Aboutus from './Components/About/Aboutus';
+import Contact from './Components/Contact/Contact';
+import Register from './Components/From/Register/Register';
 import FindDoctor from './Components/FindDoctor/FindDoctor';
-import Fasality from './Components/Fasality/Fasality';
 
 
 
@@ -19,28 +24,43 @@ function App() {
 
       <Router>
         <Header></Header>
+
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home></Home>
           </Route>
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/service">
-
-
+          <Route path="/about">
+            <Aboutus></Aboutus>
           </Route>
-          <Route path="*">
+          <Route path="/doctor">
+            <FindDoctor></FindDoctor>
+          </Route>
+          <Route path="/service">
+            <Services></Services>
+          </Route>
+          <Route path="/contact">
+            <Contact></Contact>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/signup">
+            <Register></Register>
+          </Route>
+          <Route exact path="*">
             <NotFound></NotFound>
           </Route>
         </Switch>
-        <Fasality></Fasality>
-        <FindDoctor></FindDoctor>
+
         <Footer></Footer>
       </Router>
 
     </div>
   );
 }
+
 
 export default App;

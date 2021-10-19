@@ -3,7 +3,7 @@ import { Card, Col } from 'react-bootstrap';
 
 const FindDoctorCard = (props) => {
     const { img, name, title, address, contact } = props
-    console.log(props)
+
     return (
         <Col>
             <Card>

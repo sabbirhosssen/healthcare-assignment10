@@ -17,7 +17,14 @@ const FindDoctor = () => {
             </div>
 
             <div>
-                <Row xs={1} md={3} className="g-5  m-2 " >
+                <Row xs={1} md={3} className="g-5  m-2 " style={{
+                    backgroundRepeat: "no-repeat",
+                    backgroundAttachment: "fixed",
+                    backgroundPosition: "center",
+                    backgroundSize: "700px 650px",
+                    backgroundImage: `url("https://www.ibnsinatrust.com/image/Finest-Patient-Care-&-Amenities-2.jpg")`
+
+                }}>
                     {
                         doctor.map(doctor =>
                             <FindDoctorCard
