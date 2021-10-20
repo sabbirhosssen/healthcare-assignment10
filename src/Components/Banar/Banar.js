@@ -71,7 +71,5 @@ const Banar = () => {
         </div>
     );
 };
-/* <marquee><h4
-style={{ textDecoration: "none" }} className="py-2" ><font color="red">কোভিড-১৯ পরিস্থিতিতে অসুস্থ রোগীদের সেবায় ইবনে সিনা হাসপাতাল, ধানমন্ডি ও ইবনে সিনা মেডিকেল কলেজ হাসপাতাল, কল্যাণপুর চালু করলো হোম সার্ভিস </font></h4>
-</marquee> */
+
 export default Banar;

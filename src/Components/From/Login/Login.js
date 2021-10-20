@@ -91,7 +91,7 @@ const Login = () => {
                         <Col sm={{ span: 8, offset: 2 }}>
                             {logIn ?
                                 <Button type="submit">Log in</Button> :
-                                <Button type="submit">Sign in</Button>
+                                <Button type="submit">Register</Button>
                             }
 
 

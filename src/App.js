@@ -11,7 +11,6 @@ import Services from './Components/Service/Services';
 import Login from './Components/From/Login/Login';
 import Aboutus from './Components/About/Aboutus';
 import Contact from './Components/Contact/Contact';
-import Register from './Components/From/Register/Register';
 import FindDoctor from './Components/FindDoctor/FindDoctor';
 import Hospital from './Components/page/Hospital';
 import AuthProvider from './Contexts/AuthProvider';
@@ -61,7 +60,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
-          <Register></Register>
+
           <Footer></Footer>
         </Router>
       </AuthProvider>
