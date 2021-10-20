@@ -1,10 +1,10 @@
 import "./Login.css"
 import React, { useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Image, Button, Col, Form, Row } from 'react-bootstrap';
 import initializeAuthentication from '../../../Firebase/Firebase.init';
 import useAuth from '../../../hooks/useAuth';
-import useFirebase from "../../../hooks/useFirebases";
+
 
 initializeAuthentication();
 
@@ -16,7 +16,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [logIn, setLogIn] = useState([])
-    const { user } = useFirebase();
+
 
 
     const handaleEmailChange = e => {

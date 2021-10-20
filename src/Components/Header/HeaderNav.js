@@ -6,7 +6,7 @@ import useAuth from '../../hooks/useAuth';
 
 const HeaderNav = () => {
     const { user, logOut } = useAuth();
-    console.log(user)
+
 
     return (
         <>
