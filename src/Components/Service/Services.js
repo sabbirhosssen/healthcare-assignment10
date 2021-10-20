@@ -5,7 +5,7 @@ import ServiceCard from './ServiceCard';
 const Services = () => {
     const [service, setService] = useState([])
     useEffect(() => {
-        fetch('./Servicesfakedata.JSON')
+        fetch('./Servicesfakedata.json')
             .then(res => res.json())
             .then(data => setService(data))
     })
@@ -19,9 +19,8 @@ const Services = () => {
                     {
                         service.map(service => <ServiceCard
                             key={service.id}
-                            img={service.img}
-                            title={service.title}
-                            text={service.textarea}
+                            service={service}
+
                         ></ServiceCard>
 
                         )

@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const ServiceCard = (props) => {
-    const { img, title, text } = props
+const ServiceCard = ({ service }) => {
+
+    // const {service}=props.service
+    const { img, title, textarea, id } = service
 
     return (
         <Col>
@@ -16,9 +19,13 @@ const ServiceCard = (props) => {
                     <Col sm={8}>
                         <Card.Body className="text-start">
                             <Card.Title  >{title}</Card.Title>
-                            <Card.Text>{text}
+                            <Card.Text>{textarea}
                             </Card.Text>
-                            <Card.Title variant="text-center bg-info" ><Button> Ditals</Button></Card.Title>
+
+                            <Link to={`/hospital/${id},${title},${textarea} `}>
+                                <Card.Title variant="text-center bg-info" ><Button> Add To Service</Button>
+                                </Card.Title>
+                            </Link>
 
                         </Card.Body>
                     </Col>

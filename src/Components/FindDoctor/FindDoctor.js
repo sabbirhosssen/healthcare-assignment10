@@ -5,14 +5,14 @@ import FindDoctorCard from './FindDoctorCard';
 const FindDoctor = () => {
     const [doctor, setDoctor] = useState([]);
     useEffect(() => {
-        fetch('./Doctordata.JSON')
+        fetch('./Doctordata.json')
             .then(res => res.json())
             .then(data => setDoctor(data))
     })
 
     return (
-        <div id="doctor">
-            <div className="text-center pt-5 m-5 ">
+        <div >
+            <div className="text-center pt-5 m-5 " id="doctor">
                 <h1>Find A Doctor</h1>
             </div>
 

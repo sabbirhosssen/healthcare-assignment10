@@ -1,26 +1,24 @@
+import "./Login.css"
 import React, { useState } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
-import { Button, Col, Form, Row } from 'react-bootstrap';
+import { Image, Button, Col, Form, Row } from 'react-bootstrap';
 import initializeAuthentication from '../../../Firebase/Firebase.init';
+import useAuth from '../../../hooks/useAuth';
+import useFirebase from "../../../hooks/useFirebases";
 
 initializeAuthentication();
-const googleProvider = new GoogleAuthProvider();
+
 
 const Login = () => {
+    const { signInGoogle } = useAuth({});
     const auth = getAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [logIn, setLogIn] = useState([])
+    const { user } = useFirebase();
 
-    const handaleGoogleSignIn = () => {
 
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                const user = result.user;
-                console.log(user);
-            })
-
-    }
     const handaleEmailChange = e => {
         setEmail(e.target.value);
     }
@@ -49,16 +47,21 @@ const Login = () => {
             })
 
     }
+    const toggleHandle = e => {
+        setLogIn(e.target.checked);
+    }
     return (
-        <div className="">
+        <div className="login-from">
             <hr />
-            <div className="w-50  border rounded m-5 ">
+            <div className="w-50  border rounded m-5 bg-info">
 
                 <div className="py-4">
                     <img src="https://www.ibnsinatrust.com/image/04/logo-light.png" alt="" width="200px"
                         height="100px" />
                 </div>
                 <Form onSubmit={handaleRegistation}>
+
+
                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
                         <Form.Label column sm={2}>
                             Email
@@ -78,12 +81,29 @@ const Login = () => {
                         </Col>
                     </Form.Group>
                     <Form.Label className="text-danger">{error}</Form.Label>
-
-                    <Form.Group as={Row} className="mb-3">
+                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
                         <Col sm={{ span: 10, offset: 2 }}>
-                            <Button type="submit">Sign in</Button>
+                            <Form.Check onChange={toggleHandle} label="All ready Registered" />
                         </Col>
                     </Form.Group>
+
+                    <Form.Group as={Row} className="mb-3">
+                        <Col sm={{ span: 8, offset: 2 }}>
+                            {logIn ?
+                                <Button type="submit">Log in</Button> :
+                                <Button type="submit">Sign in</Button>
+                            }
+
+
+                        </Col>
+                    </Form.Group>
+                    <Form.Label className="text-success fs-2">or</Form.Label>
+                    <Form.Group as={Row} className="mb-3">
+                        <Col sm={{ span: 8, offset: 2 }}>
+                            <Button onClick={signInGoogle} type="submit"><Image width="40" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" />Sign in with Google</Button>
+                        </Col>
+                    </Form.Group>
+
                 </Form>
             </div>
 

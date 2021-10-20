@@ -9,7 +9,7 @@ import FasalityCard from './FasalityCard';
 const Fasality = () => {
     const [fasality, setFasality] = useState([]);
     useEffect(() => {
-        fetch('./Servicedata.JSON')
+        fetch('./Servicedata.json')
             .then(res => res.json())
             .then(data => setFasality(data))
 
